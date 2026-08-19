@@ -1,27 +1,30 @@
-# AEOWUN // Deterministic AI Engineering Runtime
+# AEOWUN
 
-<img src="./docs/assets/logo.png" width="200" alt="AEOWUN Logo" />
+### Autonomous Software Engineering Runtime
 
-AEOWUN is an autonomous engineering system designed for high-fidelity codebase interaction. It implements a coordinated mesh of specialized agents managed by a primary HostRuntime to ensure state consistency and substrate integrity.
+AEOWUN is the main system I'm building.
 
-## Technical Documentation
+It is not an IDE or a chatbot wrapper. It is a runtime for managing software-engineering work around local AI.
 
-- [System Architecture](./docs/ARCHITECTURE.md): Concurrent Causal Blackboard (CCB) and ShadowFS Substrate.
-- [Engine Capabilities](./docs/FEATURES.md): Deterministic fault localization and the Foreman Protocol.
-- [Engineering Rigor](./docs/VERIFICATION.md): Verification-authorized commit invariants and causal provenance.
+The runtime owns the project state, workspace, tools, execution loop, and verification. The model provides reasoning inside that system.
 
-## Core Engineering Pillars
+Some of the parts I've built:
 
-### 1. State Authority
-The system utilizes a Concurrent Causal Blackboard (CCB) to manage the cognitive state of the agent mesh. It enforces an identity-based hierarchy (SYSTEM > TRUTH > AGENT) to detect and resolve witness conflicts when physical reality contradicts agent beliefs.
+- **Causal Blackboard** — shared runtime state with explicit authority over execution-critical information.
+- **ShadowFS** — isolated workspace and filesystem state tracking.
+- **Foreman** — watches execution and stops repetitive, non-progressing behavior.
+- **Steel Thread Analyzer** — traces failures back through the project to help locate the actual source of a problem.
+- **Verification** — checks the resulting state instead of treating a successful model/tool response as proof.
+
+---
+
+### Technical Deep-Dives
+
+- [System Architecture](./docs/ARCHITECTURE.md)
+- [Engine Capabilities](./docs/FEATURES.md)
+- [Verification Rigor](./docs/VERIFICATION.md)
 
 ![AEOWUN Command Center Topology](./docs/assets/aeowun_graph.png)
-
-### 2. Substrate Integrity
-ShadowFS provides task-isolated workspaces where all mutations are staged in memory buffers. The system enforces a fail-closed invariant, ensuring that physical disk writes only occur after a formal Verification-Authorized Commit receipt is issued.
-
-### 3. Deterministic Reasoning
-The Steel Thread Analyzer performs high-fidelity fault localization by resolving tracebacks against a semantic Knowledge Graph. This allows the system to identify the precise blast radius of an issue using static analysis rather than stochastic guessing.
 
 ---
 Note: This repository is a technical showcase for architectural review. The core source code is proprietary and private.
