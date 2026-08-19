@@ -8,6 +8,8 @@ The system enforces Causal Provenance through the Durable Execution Observatory.
 - Lineage Integrity: Validates that every tool execution is anchored to a specific DecisionID and UserIntentID.
 - Telemetry Completeness: Tracks the ratio of recorded vs. expected events to ensure 100% observability of system actions.
 
+![Authoritative Execution Log](./assets/forensic_hud.png)
+
 ## Integrity Audits
 
 Automated invariants are checked during every mutation cycle.

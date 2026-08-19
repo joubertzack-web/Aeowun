@@ -21,6 +21,8 @@ ShadowFS is a task-isolated virtual filesystem substrate.
 - Mutation Sessions: Each task operates in an isolated buffer (XID session), preventing cross-task state corruption.
 - Staging Invariants: Files are staged in memory and never touch the physical disk during the reasoning phase.
 
+![ShadowFS Staging Implementation](./assets/shadowfs.png)
+
 ### Verification-Authorized Commit
 The transition from memory to disk is a formal security gate.
 - Integrity Validation: The Verifier performs AST signature comparison to ensure proposed edits do not violate architectural invariants.

@@ -1,5 +1,7 @@
 # AEOWUN // Deterministic AI Engineering Runtime
 
+<img src="./docs/assets/logo.png" width="200" alt="AEOWUN Logo" />
+
 AEOWUN is an autonomous engineering system designed for high-fidelity codebase interaction. It implements a coordinated mesh of specialized agents managed by a primary HostRuntime to ensure state consistency and substrate integrity.
 
 ## Technical Documentation
@@ -12,6 +14,8 @@ AEOWUN is an autonomous engineering system designed for high-fidelity codebase i
 
 ### 1. State Authority
 The system utilizes a Concurrent Causal Blackboard (CCB) to manage the cognitive state of the agent mesh. It enforces an identity-based hierarchy (SYSTEM > TRUTH > AGENT) to detect and resolve witness conflicts when physical reality contradicts agent beliefs.
+
+![AEOWUN Command Center Topology](./docs/assets/aeowun_graph.png)
 
 ### 2. Substrate Integrity
 ShadowFS provides task-isolated workspaces where all mutations are staged in memory buffers. The system enforces a fail-closed invariant, ensuring that physical disk writes only occur after a formal Verification-Authorized Commit receipt is issued.
