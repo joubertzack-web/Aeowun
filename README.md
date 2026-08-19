@@ -8,7 +8,7 @@ It is not an IDE or a chatbot wrapper. It is a runtime for managing software-eng
 
 The runtime owns the project state, workspace, tools, execution loop, and verification. The model provides reasoning inside that system.
 
-Some of the parts I've built:
+Some prominent features:
 
 - **Causal Blackboard** — shared runtime state with explicit authority over execution-critical information.
 - **ShadowFS** — isolated workspace and filesystem state tracking.
